@@ -59,3 +59,19 @@ if(height === '' || height < 0 || isNan(height)){
 });
 
 ```
+
+## project 3 solution code
+
+```javascript
+const clock = document.getElementById('clock')
+
+
+
+
+setInterval(function(){
+  let date = newDate()
+ // console.log(date.toLocalTimeString());
+  clock.innerHTML = date.toLocalTimeSring();
+},1000)
+
+```
