@@ -32,3 +32,30 @@ buttons.forEach(Function(button){
   });
 });
 ```
+
+
+## project 2 solution
+
+```javascript
+const form = document.querySelector('form')
+// this usecase will give you empty
+//const height = parseInt(dicument.querySelector('#height').value)
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+
+const height = parseInt(dicument.querySelector('#height').value)
+const weight = parseInt(dicument.querySelector('#weight').value)
+const results = document.querySelector('#results')
+
+if(height === '' || height < 0 || isNan(height)){
+   result.innerHTML = `Please give a valid height &{height}`;
+}else if(weight === '' || weight < 0 || isNan(weight)){
+  result.innerHTML = `Please give a valid height &{weight}`;
+} else {
+    const bmi = (weight / ((height*height)/10000)).toFixed(2)
+    //show the result
+    result.innerHtml = `<span>${bmi}</span>`;
+}
+});
+
+```
